@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 4rem;
+}
+body .container {
+  border-radius: 25px;
+  white-space: wrap;
+  font-size: 71;
+  background: rgb(102, 102, 102);
+  background: radial-gradient(circle, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 0%, rgb(0, 0, 0) 100%);
+}
+body .container .numbers {
+  color: white;
+}
+body .container .numbers table {
+  margin-left: auto;
+  margin-right: auto;
+}
+body .container .numbers table tr td h1 {
+  font-size: 6rem;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+body .container .numbers table tr td #operation {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+body .container .truefalse {
+  margin-top: 1rem;
+}
+body .container .truefalse table {
+  margin-left: auto;
+  margin-right: auto;
+}
+body .container .truefalse table tr td h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+body .container .truefalse table tr td .true {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+  color: white;
+  padding: 32px 68px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  border-radius: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+body .container .truefalse table tr td .true:hover {
+  color: #4CAF50;
+  background-color: white;
+}
+body .container .truefalse table tr td .false {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  padding: 32px 68px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  border-radius: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+body .container .truefalse table tr td .false:hover {
+  color: red;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */
