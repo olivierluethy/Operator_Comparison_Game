@@ -4,76 +4,97 @@ var operator = "";
 var number1 = document.getElementById("number1");
 var number2 = document.getElementById("number2");
 var operation = document.getElementById("operation");
+var corin = document.getElementById("corinText");
 number1.innerHTML = Math.floor(Math.random() * 6) + 1;
 number2.innerHTML = Math.floor(Math.random() * 6) + 1;
 operator = operators[Math.floor(Math.random() * operators.length)];
 operation.innerHTML = operator;
+var corinColor = document.querySelector(".corin");
 
 document.querySelector(".true").addEventListener("click", function() {
     if (operator == "<") {
         if (number1 < number2) {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         } else {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         }
-    }
-    if (operator == ">") {
+    } else if (operator == ">") {
         if (number1 > number2) {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         } else {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         }
-    }
-    if (operator == "==") {
+    } else if (operator == "==") {
         if (number1 == number2) {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         } else {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         }
-    }
-    if (operator == "<=") {
+    } else if (operator == "<=") {
         if (number1 <= number2) {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         } else {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         }
-    }
-    if (operator == ">=") {
+    } else if (operator == ">=") {
         if (number1 >= number2) {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         } else {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         }
-    }
-    if (operator == "!=") {
+    } else if (operator == "!=") {
         if (number1 != number2) {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         } else {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         }
     }
 })
@@ -82,67 +103,86 @@ document.querySelector(".false").addEventListener("click", function() {
     if (operator == "<") {
         if (number1 < number2) {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         } else {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         }
-    }
-    if (operator == ">") {
+    } else if (operator == ">") {
         if (number1 > number2) {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         } else {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         }
-    }
-    if (operator == "==") {
+    } else if (operator == "==") {
         if (number1 == number2) {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         } else {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         }
-    }
-    if (operator == "<=") {
+    } else if (operator == "<=") {
         if (number1 <= number2) {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         } else {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         }
-    }
-    if (operator == ">=") {
+    } else if (operator == ">=") {
         if (number1 >= number2) {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         } else {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         }
-    }
-    if (operator == "!=") {
+    } else if (operator == "!=") {
         if (number1 != number2) {
             points--;
-            console.log("falsch");
+            corin.innerHTML = "Antwort Falsch!";
+            console.log("Falsch");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "red";
         } else {
             points++;
-            console.log("richtig");
+            corin.innerHTML = "Antwort Richtig!";
+            console.log("Richtig");
             getRandomNumbers();
+            corinColor.style.backgroundColor = "green";
         }
     }
 })

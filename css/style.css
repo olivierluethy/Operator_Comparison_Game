@@ -11,8 +11,11 @@ body .container {
   border-radius: 25px;
   white-space: wrap;
   font-size: 71;
+  margin-left: 4rem;
+  margin-right: 4rem;
   background: rgb(102, 102, 102);
   background: radial-gradient(circle, rgb(102, 102, 102) 0%, rgb(102, 102, 102) 0%, rgb(0, 0, 0) 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 body .container .numbers {
   color: white;
@@ -23,7 +26,7 @@ body .container .numbers table {
 }
 body .container .numbers table tr td h1 {
   font-size: 6rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   text-decoration: none;
 }
 body .container .numbers table tr td #operation {
@@ -31,7 +34,7 @@ body .container .numbers table tr td #operation {
   margin-right: 6rem;
 }
 body .container .truefalse {
-  margin-top: 1rem;
+  margin-top: -3rem;
 }
 body .container .truefalse table {
   margin-left: auto;
@@ -45,8 +48,9 @@ body .container .truefalse table tr td h1 {
   margin-right: 2rem;
 }
 body .container .truefalse table tr td .true {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #4CAF50;
-  border: 1px solid #4CAF50;
+  border: 5px solid #4CAF50;
   color: white;
   padding: 32px 68px;
   text-align: center;
@@ -64,8 +68,9 @@ body .container .truefalse table tr td .true:hover {
   background-color: white;
 }
 body .container .truefalse table tr td .false {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: red;
-  border: 1px solid red;
+  border: 5px solid red;
   color: white;
   padding: 32px 68px;
   text-align: center;
@@ -81,4 +86,16 @@ body .container .truefalse table tr td .false {
 body .container .truefalse table tr td .false:hover {
   color: red;
   background-color: white;
+}
+body .corin {
+  background-color: green;
+  border-radius: 25px;
+  white-space: wrap;
+  font-size: 71;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+body .corin h1 {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
