@@ -5,49 +5,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive trainer that builds programmers' intuition for comparison operators and numerical reasoning.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="assets/favicon.ico">
-    <title>Higher Lower Game</title>
+    <title>Operator Trainer — Comparison & Numerical Reasoning</title>
 </head>
 
 <body>
-    <h1>Higher Lower Game - Programmers Edition</h1>
+    <div class="app">
+        <!-- ── Header ─────────────────────────────────────────── -->
+        <header class="app__header">
+            <div class="brand">
+                <span class="brand__logo">&lt;/&gt;</span>
+                <div>
+                    <h1 class="brand__title">Operator Trainer</h1>
+                    <p class="brand__subtitle">Build real intuition for how comparison operators behave.</p>
+                </div>
+            </div>
 
-    <div class="container">
-        <div class="numbers">
-            <table>
-                <tr>
-                    <td>
-                        <h1 id="number1"></h1>
-                    </td>
-                    <td>
-                        <h1 id="operation"></h1>
-                    </td>
-                    <td>
-                        <h1 id="number2"></h1>
-                    </td>
-                </tr>
-            </table>
+            <div class="stats" aria-live="polite">
+                <div class="stat">
+                    <span class="stat__value" id="statScore">0</span>
+                    <span class="stat__label">Score</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__value" id="statStreak">0</span>
+                    <span class="stat__label">Streak</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__value" id="statAccuracy">100%</span>
+                    <span class="stat__label">Accuracy</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ── Difficulty selector ────────────────────────────── -->
+        <div class="difficulty" role="tablist" aria-label="Difficulty">
+            <button class="difficulty__btn" data-difficulty="easy" role="tab">
+                <span class="difficulty__name">Easy</span>
+                <span class="difficulty__desc">0–20 · core operators · no timer</span>
+            </button>
+            <button class="difficulty__btn" data-difficulty="medium" role="tab">
+                <span class="difficulty__name">Medium</span>
+                <span class="difficulty__desc">0–1000 · all operators · 12s</span>
+            </button>
+            <button class="difficulty__btn" data-difficulty="hard" role="tab">
+                <span class="difficulty__name">Hard</span>
+                <span class="difficulty__desc">negatives, floats, hex · 8s</span>
+            </button>
         </div>
-        <div class="truefalse">
-            <table>
-                <tr>
-                    <td>
-                        <button class="true">True</button>
-                    </td>
-                    <td>
-                        <h1>||</h1>
-                    </td>
-                    <td>
-                        <button class="false">False</button>
-                    </td>
-                </tr>
-            </table>
-        </div><br><br>
+
+        <!-- ── Mastery progress ───────────────────────────────── -->
+        <div class="mastery">
+            <div class="mastery__head">
+                <span>Concept mastery</span>
+                <span id="masteryCount">0 / 0 mastered</span>
+            </div>
+            <div class="mastery__track">
+                <div class="mastery__fill" id="masteryFill"></div>
+            </div>
+        </div>
+
+        <!-- ── Question card ──────────────────────────────────── -->
+        <main class="card" id="card">
+            <div class="card__timer" id="timerWrap" hidden>
+                <div class="card__timer-bar" id="timerBar"></div>
+            </div>
+
+            <p class="card__concept" id="conceptTag">Comparison</p>
+
+            <div class="expr" id="expr">
+                <span class="expr__operand" id="operandA">0</span>
+                <span class="expr__operator" id="operator">&lt;</span>
+                <span class="expr__operand" id="operandB">0</span>
+            </div>
+
+            <p class="card__prompt">Is this statement <strong>true</strong> or <strong>false</strong>?</p>
+
+            <div class="answers">
+                <button class="answer answer--true" id="btnTrue">
+                    <span class="answer__icon">✓</span> True
+                    <kbd class="answer__key">T</kbd>
+                </button>
+                <button class="answer answer--false" id="btnFalse">
+                    <span class="answer__icon">✕</span> False
+                    <kbd class="answer__key">F</kbd>
+                </button>
+            </div>
+        </main>
+
+        <!-- ── Feedback / explanation ─────────────────────────── -->
+        <section class="feedback" id="feedback" hidden aria-live="polite">
+            <div class="feedback__badge" id="feedbackBadge"></div>
+            <p class="feedback__explanation" id="feedbackText"></p>
+            <button class="feedback__next" id="btnNext">
+                Next question <kbd class="answer__key">↵</kbd>
+            </button>
+        </section>
+
+        <!-- ── Footer ─────────────────────────────────────────── -->
+        <footer class="app__footer">
+            <p>Wrong answers come back sooner — concepts you ace are spaced further out.</p>
+            <button class="reset" id="btnReset">Reset progress</button>
+        </footer>
     </div>
-    <div class="corin">
-        <h1 id="corinText"></h1>
-    </div>
+
     <script src="js/main.js"></script>
 </body>
 
